@@ -1,0 +1,18 @@
+// json type to post 
+curl -X POST -H "Content-Type: application/json" -d '{
+    "name" : "Bugatti",
+    "model" : "Veyron",
+    "manufacturer" : "Bugatti Rimac",
+    "year" : "2015",
+    "color": "Black on Yellow" 
+
+}' http://localhost:8888/vehicle
+
+// query post
+curl -X POST "http://localhost:8888/vehicle?name=Bugatti&model=Veyron&manufacturer=Bugatti%20Rimac&year=2015&color=Black%20on%20Yellow"
+
+//uses query string paramsmeters with payload an (customer)
+curl -X POST "http://localhost:8888/vehicle?name=Bugatti&model=Veyron&manufacturer=Bugatti%20Rimac&year=2015&color=Black%20on%20Yellow&first_name=Muhh&last_name=Dipzz"
+
+
+name{0}, model{1}, manufacturer{2}, year{3}, color{4}", v.name, v.model, v.manufacturer, v.year, v.color

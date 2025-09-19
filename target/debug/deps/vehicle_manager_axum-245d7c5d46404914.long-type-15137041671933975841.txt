@@ -1,0 +1,2 @@
+fn(Query<Vehicle>) -> impl std::future::Future<Output = axum::Json<Vehicle>> {vehicle::vehicle_get_post}
+fn(Query<Vehicle>) -> impl std::future::Future<Output = axum::Json<Vehicle>> {vehicle::vehicle_get_post}: Handler<_, _>
